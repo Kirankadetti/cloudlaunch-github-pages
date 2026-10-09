@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090b16" />
+  <meta name="description" content="CloudLaunch — a DevOps deployment experience built with HTML, CSS, JavaScript and GitHub Pages." />
+  <title>CloudLaunch — From Code to Cloud</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#home" aria-label="CloudLaunch home">
+      <span class="brand-icon">C<span>.</span></span>
+      <span>cloudlaunch<span class="brand-dot">/</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#architecture">Architecture</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#launch">Explore deployment <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> STATIC DEPLOYMENT · 001</div>
+        <h1>From code<br />to <span class="gradient-text">cloud.</span></h1>
+        <p class="hero-description">
+          A simple idea. A clean workflow. A website available to the world.
+          Discover how modern version control turns static files into a live experience.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#architecture" class="button button-primary">Explore the workflow <span>↗</span></a>
+          <a href="#about" class="button button-secondary">The project <span>↓</span></a>
+        </div>
+
+        <div class="hero-meta">
+          <span><i class="status-dot"></i> Free static hosting</span>
+          <span>HTML · CSS · JavaScript</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Illustration of a website being deployed">
+        <div class="orbit orbit-outer"></div>
+        <div class="orbit orbit-inner"></div>
+        <div class="orbit-node node-one">GIT</div>
+        <div class="orbit-node node-two">&lt;/&gt;</div>
+        <div class="orbit-node node-three">↗</div>
+
+        <div class="cloud-card">
+          <div class="window-bar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>deployment.config</span>
+            <span class="window-lock">● SECURE FLOW</span>
+          </div>
+          <div class="code-lines" aria-hidden="true">
+            <div><span class="line-number">01</span><span class="code-purple">const</span> <span class="code-blue">deployment</span> = {</div>
+            <div class="indent"><span class="code-green">platform</span>: <span class="code-yellow">'GitHub Pages'</span>,</div>
+            <div class="indent"><span class="code-green">source</span>: <span class="code-yellow">'main / root'</span>,</div>
+            <div class="indent"><span class="code-green">status</span>: <span class="code-yellow">'live'</span></div>
+            <div>};</div>
+            <div class="terminal-line"><span>➜</span> deployment.publish()<b>_</b></div>
+          </div>
+          <div class="deploy-success"><span>✓</span><div><strong>Ready for the world</strong><small>Static deployment workflow</small></div><span class="live-label">LIVE</span></div>
+        </div>
+        <div class="floating-label label-top"><span>01</span> SOURCE CONTROL</div>
+        <div class="floating-label label-bottom"><span>02</span> PUBLIC DEPLOYMENT</div>
+      </div>
+    </section>
+
+    <section class="stats section-wrap" aria-label="Project highlights">
+      <div><span class="stat-number">01</span><span class="stat-label">Source repository</span></div>
+      <div><span class="stat-number">02</span><span class="stat-label">Deployment steps</span></div>
+      <div><span class="stat-number">0<span class="stat-plus">₹</span></span><span class="stat-label">Hosting cost on GitHub Pages</span></div>
+      <div><span class="stat-number">∞</span><span class="stat-label">Ways to improve</span></div>
+    </section>
+
+    <section class="content-section section-wrap" id="architecture">
+      <div class="section-heading">
+        <div><div class="eyebrow">THE ARCHITECTURE</div><h2>A small pipeline.<br /><span class="muted-heading">A real deployment.</span></h2></div>
+        <p>No server to manage. No backend required. Just static assets, version control, and a publishing platform.</p>
+      </div>
+
+      <div class="architecture-grid">
+        <article class="architecture-card">
+          <span class="card-index">01 / DEVELOP</span>
+          <div class="architecture-icon icon-code">&lt;/&gt;</div>
+          <h3>Write the code</h3>
+          <p>Build the website with HTML for structure, CSS for design, and JavaScript for interaction.</p>
+          <span class="card-foot">LOCAL FILES <span>↗</span></span>
+        </article>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="architecture-card">
+          <span class="card-index">02 / VERSION</span>
+          <div class="architecture-icon icon-git">⌘</div>
+          <h3>Push to GitHub</h3>
+          <p>Track changes with Git and keep the source code in a remote repository on GitHub.</p>
+          <span class="card-foot">SOURCE CONTROL <span>↗</span></span>
+        </article>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <article class="architecture-card">
+          <span class="card-index">03 / PUBLISH</span>
+          <div class="architecture-icon icon-cloud">↗</div>
+          <h3>Go live</h3>
+          <p>Configure GitHub Pages to publish the selected branch and root directory as a website.</p>
+          <span class="card-foot">PUBLIC WEBSITE <span>↗</span></span>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow-section" id="workflow">
+      <div class="section-wrap workflow-inner">
+        <div class="section-heading">
+          <div><div class="eyebrow">DEPLOYMENT PLAYBOOK</div><h2>Four steps to<br /><span class="muted-heading">go live.</span></h2></div>
+          <p>A practical checklist for publishing and maintaining a static website through GitHub Pages.</p>
+        </div>
+
+        <div class="workflow-list">
+          <article class="workflow-step"><span class="step-number">01</span><div><h3>Create your repository</h3><p>Store your HTML, CSS, and JavaScript files in a dedicated GitHub repository.</p></div><span class="step-tag">GITHUB</span></article>
+          <article class="workflow-step"><span class="step-number">02</span><div><h3>Commit and push</h3><p>Use Git to record your changes and push the project to the <code>main</code> branch.</p></div><span class="step-tag">GIT</span></article>
+          <article class="workflow-step"><span class="step-number">03</span><div><h3>Enable GitHub Pages</h3><p>Open Settings → Pages, choose the <code>main</code> branch and <code>/(root)</code>.</p></div><span class="step-tag">PUBLISH</span></article>
+          <article class="workflow-step"><span class="step-number">04</span><div><h3>Verify and update</h3><p>Open the published URL, test the page, and push future changes to update the site.</p></div><span class="step-tag">VERIFY</span></article>
+        </div>
+      </div>
+    </section>
+
+<!-- GitHub Pages FAQ -->
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">TECHNICAL KNOWLEDGE</span>
+      <h2>GitHub Pages, <span class="gradient-text">explained.</span></h2>
+      <p>
+        Essential concepts behind static website hosting and deployment.
+      </p>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is GitHub Pages?</summary>
+        <p>
+          GitHub Pages is a hosting service that publishes static websites
+          directly from a GitHub repository. It supports HTML, CSS,
+          JavaScript, and other static assets.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can GitHub Pages host a dynamic application?</summary>
+        <p>
+          GitHub Pages does not run server-side application code such as
+          Django, Flask, PHP, or Node.js. A static frontend can communicate
+          with a separately hosted backend API.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do you update a deployed website?</summary>
+        <p>
+          Edit the source files, commit the changes with Git, and push them
+          to the configured GitHub branch. GitHub Pages then publishes the
+          updated site. Allow time for deployment to finish.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the default entry file?</summary>
+        <p>
+          For this project, index.html is the homepage entry file placed
+          at the root of the published directory.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What happens if the repository is deleted?</summary>
+        <p>
+          Deleting the repository removes the source repository and its
+          associated Pages deployment. Keep a backup before deleting
+          a project you want to preserve.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can GitHub Pages use a custom domain?</summary>
+        <p>
+          Yes. You can configure a domain you own in the repository's
+          Pages settings and update the required DNS records with your
+          domain provider. DNS propagation and HTTPS setup may take time.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What are the hosting limitations?</summary>
+        <p>
+          GitHub Pages is intended for static sites, not server-side
+          processing or databases. Review GitHub's official usage limits
+          before deploying larger or high-traffic projects.
+        </p>
+      </details>
+    </div>
+
+    <div class="faq-reference">
+      <span>WANT TO EXPLORE FURTHER?</span>
+      <a href="https://docs.github.com/en/pages"
+         target="_blank"
+         rel="noopener noreferrer">
+        Read the official GitHub Pages documentation
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <section class="about-section section-wrap" id="about">
+      <div class="about-card">
+        <div class="about-content">
+          <div class="eyebrow">BUILT TO LEARN BY DOING</div>
+          <h2>Infrastructure is a mindset.<br /><span class="gradient-text">Deployment is the proof.</span></h2>
+          <p>CloudLaunch demonstrates a foundational DevOps practice: using version control and a managed publishing platform to deliver a website. The focus is simplicity, reproducibility, and a clean deployment workflow.</p>
+          <div class="tech-pills"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span><span>GitHub Pages</span></div>
+        </div>
+        <div class="about-symbol" aria-hidden="true"><span>CL</span><i></i><i></i><i></i></div>
+      </div>
+    </section>
+
+<!-- Deployment Configuration Section -->
+<section class="section deployment" id="deployment">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">DEPLOYMENT DETAILS</span>
+      <h2>From repository to <span class="gradient-text">live website.</span></h2>
+      <p>
+        CloudLaunch demonstrates how a static website can be version-controlled
+        with Git and published using GitHub Pages.
+      </p>
+    </div>
+
+    <div class="deployment-grid">
+      <article class="deployment-card">
+        <span class="deployment-number">01</span>
+        <h3>Source code</h3>
+        <p>HTML structures the page, CSS controls the responsive design,
+          and JavaScript adds interactive behavior.</p>
+      </article>
+
+      <article class="deployment-card">
+        <span class="deployment-number">02</span>
+        <h3>Version control</h3>
+        <p>Git tracks changes locally, while GitHub stores the repository
+          and provides a central source for deployment.</p>
+      </article>
+
+      <article class="deployment-card">
+        <span class="deployment-number">03</span>
+        <h3>Hosting platform</h3>
+        <p>GitHub Pages publishes supported static files from the
+          configured repository branch and folder.</p>
+      </article>
+    </div>
+
+    <div class="config-panel">
+      <div class="config-header">
+        <span class="status-dot"></span>
+        <span>DEPLOYMENT CONFIGURATION</span>
+      </div>
+
+      <div class="config-row">
+        <span>Project</span>
+        <strong>CloudLaunch</strong>
+      </div>
+      <div class="config-row">
+        <span>Hosting</span>
+        <strong>GitHub Pages</strong>
+      </div>
+      <div class="config-row">
+        <span>Source branch</span>
+        <strong>main</strong>
+      </div>
+      <div class="config-row">
+        <span>Publish folder</span>
+        <strong>/ (root)</strong>
+      </div>
+      <div class="config-row">
+        <span>Entry file</span>
+        <strong>index.html</strong>
+      </div>
+
+      <p class="config-note">
+        These are the intended settings. The live deployment will be verified
+        after GitHub Pages is enabled.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <section class="launch-section section-wrap" id="launch">
+      <div class="launch-card">
+        <div class="eyebrow"><span class="pulse"></span> NEXT STEP</div>
+        <h2>Ready to launch<br /><span class="gradient-text">your next idea?</span></h2>
+        <p>Start with a repository. Build with purpose. Publish with confidence.</p>
+        <a class="button button-primary" href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">Explore GitHub Pages <span>↗</span></a>
+        <span class="launch-note">A learning project · Built with open web technologies</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-wrap">
+    <a class="brand" href="#home"><span class="brand-icon">C<span>.</span></span><span>cloudlaunch<span class="brand-dot">/</span></span></a>
+    <p>From source to screen. One commit at a time.</p>
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    <div class="footer-bottom"><span>© <span id="year"></span> CloudLaunch</span><span>STATIC BY DESIGN · DEPLOYED WITH GITHUB PAGES</span></div>
+  </footer>
+</body>
+</html>
